@@ -29,4 +29,19 @@ class AppRouter: IRouter {
         let viewController: UIViewController = module.resolve(using: params)
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func present(module: FeatureModule, asNavigation: Bool = false, using params: [String : Any] = [:]) {
+        if asNavigation {
+            let appRouter = AppRouter()
+            let module = module.create(using: appRouter)
+            let viewController: UIViewController = module.resolve(using: params)
+            let nav = UINavigationController(rootViewController: viewController)
+            module.router.setNavigationController(nav)
+            navigationController.present(nav, animated: true, completion: nil)
+        } else {
+            let module = module.create(using: self)
+            let viewController: UIViewController = module.resolve(using: params)
+            navigationController.present(viewController, animated: true, completion: nil)
+        }
+    }
 }

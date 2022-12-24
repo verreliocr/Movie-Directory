@@ -42,6 +42,7 @@ class ListMovieViewModel: IModule {
                     self?.getListMovie(appendResult: appendResult)
                 })
             }
+            completion?(type)
         }
     }
     
@@ -65,7 +66,7 @@ extension ListMovieViewModel: IListMoviesViewModel {
     }
     
     func viewWillAppear() {
-        getListMovie(appendResult: true)
+        getListMovie()
     }
     
     func getNumberOfMovie() -> Int {

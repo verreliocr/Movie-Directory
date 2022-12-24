@@ -34,8 +34,8 @@ class DetailMovieView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 88, right: 0)
-        self.title = "Detail Movie"
+        setupView()
+        setupAction()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,10 +49,6 @@ class DetailMovieView: UIViewController {
         webView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
     }
     
-    private func setupNavigation() {
-        self.navigationController?.showBarIfNecessary()
-    }
-    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             let value = webView.estimatedProgress
@@ -62,6 +58,21 @@ class DetailMovieView: UIViewController {
             } else {
                 self.webViewLoading.isHidden = false
             }
+        }
+    }
+    
+    private func setupNavigation() {
+        self.title = "Detail Movie"
+        self.navigationController?.showBarIfNecessary()
+    }
+    
+    private func setupView() {
+        self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 88, right: 0)
+    }
+    
+    private func setupAction() {
+        reviewsButton.addAction { [unowned self] in
+            self.viewModel.didSelectReviews()
         }
     }
 
@@ -79,7 +90,7 @@ extension DetailMovieView: IDetailMovieView {
         releaseDateLabel.text = viewModel.getReleaseDate()
         overviewLabel.text = viewModel.getOverview()
         
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+        DispatchQueue.main.async { [unowned self] in
             if let url = URL(string: "https://www.youtube.com/embed/\(viewModel.getYoutubeKey())") {
                 webView.load(URLRequest(url: url))
                 webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)

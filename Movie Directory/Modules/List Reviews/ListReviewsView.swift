@@ -35,6 +35,7 @@ class ListReviewsView: UIViewController {
     
     private func setupNavigation() {
         self.navigationController?.showBarIfNecessary()
+        self.title = "Reviews"
     }
     
     private func setupTableView() {
@@ -47,9 +48,11 @@ class ListReviewsView: UIViewController {
 
 }
 
-extension ListReviewsView: IListMovieView {
+extension ListReviewsView: IListReviewsView {
     func reloadView() {
-        
+        DispatchQueue.main.async { [unowned self] in
+            self.reviewTableView.reloadData()
+        }
     }
 }
 
@@ -59,14 +62,24 @@ extension ListReviewsView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.getNumberOfReviews()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell: ReviewItemTableCell = tableView.dequeueReusableCell() {
+            
+            cell.bind(name: viewModel.getName(at: indexPath.row),
+                      review: viewModel.getReview(at: indexPath.row))
+            
+            return cell
+        }
         return UITableViewCell()
     }
 }
 
 extension ListReviewsView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        viewModel.willDisplayCell(at: indexPath.row)
+    }
 }

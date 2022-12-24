@@ -18,8 +18,7 @@ protocol IListReviewsView: AnyObject {
 protocol IListReviewsViewModel {
     func setView(_ view: IListReviewsView)
     func viewWillAppear()
-    func getTitlePage() -> String
-    func getNumberOfRows() -> Int
+    func getNumberOfReviews() -> Int
     func getName(at row: Int) -> String
     func getReview(at row: Int) -> String
     func willDisplayCell(at row: Int)

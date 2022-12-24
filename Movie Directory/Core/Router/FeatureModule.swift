@@ -11,6 +11,7 @@ import UIKit
 enum FeatureModule {
     case listMovie
     case detailMovie
+    case listReviews
 
     func create(using router: IRouter) -> IModule {
         switch self {
@@ -18,6 +19,8 @@ enum FeatureModule {
             return ListMovieViewModel(router: router)
         case .detailMovie:
             return DetailMovieViewModel(router: router)
+        case .listReviews:
+            return ListReviewsViewModel(router: router)
         }
     }
 }

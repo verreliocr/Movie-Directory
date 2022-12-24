@@ -53,6 +53,7 @@
 		26D698902956EDF00099B122 /* ListReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D6988E2956EDF00099B122 /* ListReviewsView.xib */; };
 		26D698942956EE070099B122 /* ReviewItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698922956EE070099B122 /* ReviewItemTableCell.swift */; };
 		26D698952956EE070099B122 /* ReviewItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698932956EE070099B122 /* ReviewItemTableCell.xib */; };
+		26D698972956F0270099B122 /* ListReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698962956F0270099B122 /* ListReviewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		26D6988E2956EDF00099B122 /* ListReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListReviewsView.xib; sourceTree = "<group>"; };
 		26D698922956EE070099B122 /* ReviewItemTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItemTableCell.swift; sourceTree = "<group>"; };
 		26D698932956EE070099B122 /* ReviewItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewItemTableCell.xib; sourceTree = "<group>"; };
+		26D698962956F0270099B122 /* ListReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */,
 				26D6988D2956EDF00099B122 /* ListReviewsView.swift */,
 				26D6988E2956EDF00099B122 /* ListReviewsView.xib */,
+				26D698962956F0270099B122 /* ListReviewsViewModel.swift */,
 			);
 			path = "List Reviews";
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				26D6988A2956ED220099B122 /* ListReviewsContract.swift in Sources */,
 				26D698682956BF190099B122 /* ReviewObject.swift in Sources */,
 				26D6984C2956BAD50099B122 /* Reachability.swift in Sources */,
+				26D698972956F0270099B122 /* ListReviewsViewModel.swift in Sources */,
 				26D698622956BDA60099B122 /* DetailMovieResponse.swift in Sources */,
 				26D698942956EE070099B122 /* ReviewItemTableCell.swift in Sources */,
 				26D698542956BB400099B122 /* HTTPRequest.swift in Sources */,

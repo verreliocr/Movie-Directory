@@ -12,4 +12,5 @@ protocol IRouter: AnyObject {
     func setNavigationController(_ nav: UINavigationController)
     func setRoot(to module: FeatureModule, window: UIWindow?, using params: [String: Any])
     func push(module: FeatureModule, using params: [String: Any])
+    func present(module: FeatureModule, asNavigation: Bool, using params: [String: Any])
 }

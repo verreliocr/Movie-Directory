@@ -107,6 +107,6 @@ extension DetailMovieViewModel: IDetailMovieViewModel {
     }
     
     func didSelectReviews() {
-        
+        router.present(module: .listReviews, asNavigation: true, using: ["id": model.movieId])
     }
 }
