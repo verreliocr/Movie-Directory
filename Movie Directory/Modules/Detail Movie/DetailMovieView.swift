@@ -79,12 +79,15 @@ extension DetailMovieView: IDetailMovieView {
         releaseDateLabel.text = viewModel.getReleaseDate()
         overviewLabel.text = viewModel.getOverview()
         
-        if let url = URL(string: "https://www.youtube.com/embed/\(viewModel.getYoutubeKey())") {
-            webView.load(URLRequest(url: url))
-            webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
-            webView.isHidden = false
-        }else{
-            webView.isHidden = true
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+            if let url = URL(string: "https://www.youtube.com/embed/\(viewModel.getYoutubeKey())") {
+                webView.load(URLRequest(url: url))
+                webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+                webView.isHidden = false
+            }else{
+                webView.isHidden = true
+            }
         }
+        
     }
 }

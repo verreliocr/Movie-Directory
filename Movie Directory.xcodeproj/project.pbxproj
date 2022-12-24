@@ -49,6 +49,10 @@
 		26D698872956E7D50099B122 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698862956E7D50099B122 /* DetailMovieViewModel.swift */; };
 		26D6988A2956ED220099B122 /* ListReviewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698892956ED220099B122 /* ListReviewsContract.swift */; };
 		26D6988C2956ED9B0099B122 /* ListReviewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */; };
+		26D6988F2956EDF00099B122 /* ListReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6988D2956EDF00099B122 /* ListReviewsView.swift */; };
+		26D698902956EDF00099B122 /* ListReviewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D6988E2956EDF00099B122 /* ListReviewsView.xib */; };
+		26D698942956EE070099B122 /* ReviewItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698922956EE070099B122 /* ReviewItemTableCell.swift */; };
+		26D698952956EE070099B122 /* ReviewItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698932956EE070099B122 /* ReviewItemTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +100,10 @@
 		26D698862956E7D50099B122 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
 		26D698892956ED220099B122 /* ListReviewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsContract.swift; sourceTree = "<group>"; };
 		26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsModel.swift; sourceTree = "<group>"; };
+		26D6988D2956EDF00099B122 /* ListReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsView.swift; sourceTree = "<group>"; };
+		26D6988E2956EDF00099B122 /* ListReviewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListReviewsView.xib; sourceTree = "<group>"; };
+		26D698922956EE070099B122 /* ReviewItemTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItemTableCell.swift; sourceTree = "<group>"; };
+		26D698932956EE070099B122 /* ReviewItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewItemTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,10 +257,22 @@
 		26D698882956ECFE0099B122 /* List Reviews */ = {
 			isa = PBXGroup;
 			children = (
+				26D698912956EDF70099B122 /* Cells */,
 				26D698892956ED220099B122 /* ListReviewsContract.swift */,
 				26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */,
+				26D6988D2956EDF00099B122 /* ListReviewsView.swift */,
+				26D6988E2956EDF00099B122 /* ListReviewsView.xib */,
 			);
 			path = "List Reviews";
+			sourceTree = "<group>";
+		};
+		26D698912956EDF70099B122 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				26D698922956EE070099B122 /* ReviewItemTableCell.swift */,
+				26D698932956EE070099B122 /* ReviewItemTableCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,9 +335,11 @@
 			files = (
 				26D698732956D94C0099B122 /* MovieItemCollectionCell.xib in Resources */,
 				26D698772956DA210099B122 /* ListMovieView.xib in Resources */,
+				26D698902956EDF00099B122 /* ListReviewsView.xib in Resources */,
 				26D698852956E59E0099B122 /* DetailMovieView.xib in Resources */,
 				26D6982D2956AEB00099B122 /* LaunchScreen.storyboard in Resources */,
 				26D6982A2956AEB00099B122 /* Assets.xcassets in Resources */,
+				26D698952956EE070099B122 /* ReviewItemTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +361,7 @@
 				26D698682956BF190099B122 /* ReviewObject.swift in Sources */,
 				26D6984C2956BAD50099B122 /* Reachability.swift in Sources */,
 				26D698622956BDA60099B122 /* DetailMovieResponse.swift in Sources */,
+				26D698942956EE070099B122 /* ReviewItemTableCell.swift in Sources */,
 				26D698542956BB400099B122 /* HTTPRequest.swift in Sources */,
 				26D698432956B7A70099B122 /* Extension+UIView.swift in Sources */,
 				26D6984A2956BAC10099B122 /* HTTPMethod.swift in Sources */,
@@ -346,6 +369,7 @@
 				26D6983D2956B7660099B122 /* Extension+UIImageView.swift in Sources */,
 				26D698572956BBB80099B122 /* IRouter.swift in Sources */,
 				26D6985D2956BBEF0099B122 /* FeatureModule.swift in Sources */,
+				26D6988F2956EDF00099B122 /* ListReviewsView.swift in Sources */,
 				26D698472956BA7A0099B122 /* Extension+UINavigationController.swift in Sources */,
 				26D698762956DA210099B122 /* ListMovieView.swift in Sources */,
 				26D698642956BE570099B122 /* Extension+Codable.swift in Sources */,
