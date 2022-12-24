@@ -11,6 +11,5 @@ class ListMovieModel {
     var page: Int = 1
     var totalPages: Int = 0
     var totalElements: Int = 0
-    var allowRequestNextPage: Bool = true
     var movies: [ListMovieObject] = []
 }
