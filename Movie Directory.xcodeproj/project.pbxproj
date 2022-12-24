@@ -35,6 +35,7 @@
 		26D698662956BE800099B122 /* VideoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698652956BE800099B122 /* VideoObject.swift */; };
 		26D698682956BF190099B122 /* ReviewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698672956BF190099B122 /* ReviewObject.swift */; };
 		26D6986A2956BF3D0099B122 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698692956BF3D0099B122 /* BaseResponse.swift */; };
+		26D6986E2956D7450099B122 /* ListMovieContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6986D2956D7450099B122 /* ListMovieContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		26D698652956BE800099B122 /* VideoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoObject.swift; sourceTree = "<group>"; };
 		26D698672956BF190099B122 /* ReviewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewObject.swift; sourceTree = "<group>"; };
 		26D698692956BF3D0099B122 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		26D6986D2956D7450099B122 /* ListMovieContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				26D698342956B6F40099B122 /* Core */,
 				26D6985E2956BC230099B122 /* Responses */,
+				26D6986B2956C0720099B122 /* Modules */,
 				26D698202956AEAE0099B122 /* AppDelegate.swift */,
 				26D698292956AEB00099B122 /* Assets.xcassets */,
 				26D6982B2956AEB00099B122 /* LaunchScreen.storyboard */,
@@ -171,6 +174,22 @@
 				26D698672956BF190099B122 /* ReviewObject.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		26D6986B2956C0720099B122 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				26D6986C2956C07A0099B122 /* List Movie */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		26D6986C2956C07A0099B122 /* List Movie */ = {
+			isa = PBXGroup;
+			children = (
+				26D6986D2956D7450099B122 /* ListMovieContract.swift */,
+			);
+			path = "List Movie";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +282,7 @@
 				26D698642956BE570099B122 /* Extension+Codable.swift in Sources */,
 				26D698452956B7BC0099B122 /* Extension+UIViewController.swift in Sources */,
 				26D698392956B7430099B122 /* Extension+UICollectionViewCell.swift in Sources */,
+				26D6986E2956D7450099B122 /* ListMovieContract.swift in Sources */,
 				26D698592956BBC90099B122 /* AppRouter.swift in Sources */,
 				26D698602956BC4A0099B122 /* ListMovieObject.swift in Sources */,
 				26D698212956AEAE0099B122 /* AppDelegate.swift in Sources */,
