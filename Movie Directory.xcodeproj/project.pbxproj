@@ -42,6 +42,7 @@
 		26D698772956DA210099B122 /* ListMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698752956DA210099B122 /* ListMovieView.xib */; };
 		26D698792956DBD30099B122 /* ListMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698782956DBD30099B122 /* ListMovieViewModel.swift */; };
 		26D6987B2956DC220099B122 /* ListMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6987A2956DC220099B122 /* ListMovieModel.swift */; };
+		26D6987E2956E4630099B122 /* DetailMovieContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6987D2956E4630099B122 /* DetailMovieContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		26D698752956DA210099B122 /* ListMovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMovieView.xib; sourceTree = "<group>"; };
 		26D698782956DBD30099B122 /* ListMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModel.swift; sourceTree = "<group>"; };
 		26D6987A2956DC220099B122 /* ListMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieModel.swift; sourceTree = "<group>"; };
+		26D6987D2956E4630099B122 /* DetailMovieContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				26D6986C2956C07A0099B122 /* List Movie */,
+				26D6987C2956E44B0099B122 /* Detail Movie */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -216,6 +219,14 @@
 				26D698712956D94C0099B122 /* MovieItemCollectionCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		26D6987C2956E44B0099B122 /* Detail Movie */ = {
+			isa = PBXGroup;
+			children = (
+				26D6987D2956E4630099B122 /* DetailMovieContract.swift */,
+			);
+			path = "Detail Movie";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +306,7 @@
 				26D698372956B71E0099B122 /* Extension+UIApplication.swift in Sources */,
 				26D698522956BB360099B122 /* IRequest.swift in Sources */,
 				26D698662956BE800099B122 /* VideoObject.swift in Sources */,
+				26D6987E2956E4630099B122 /* DetailMovieContract.swift in Sources */,
 				26D6985B2956BBD90099B122 /* IModule.swift in Sources */,
 				26D698682956BF190099B122 /* ReviewObject.swift in Sources */,
 				26D6984C2956BAD50099B122 /* Reachability.swift in Sources */,
