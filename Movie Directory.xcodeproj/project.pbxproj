@@ -48,6 +48,7 @@
 		26D698852956E59E0099B122 /* DetailMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698832956E59E0099B122 /* DetailMovieView.xib */; };
 		26D698872956E7D50099B122 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698862956E7D50099B122 /* DetailMovieViewModel.swift */; };
 		26D6988A2956ED220099B122 /* ListReviewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698892956ED220099B122 /* ListReviewsContract.swift */; };
+		26D6988C2956ED9B0099B122 /* ListReviewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		26D698832956E59E0099B122 /* DetailMovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieView.xib; sourceTree = "<group>"; };
 		26D698862956E7D50099B122 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
 		26D698892956ED220099B122 /* ListReviewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsContract.swift; sourceTree = "<group>"; };
+		26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				26D698892956ED220099B122 /* ListReviewsContract.swift */,
+				26D6988B2956ED9B0099B122 /* ListReviewsModel.swift */,
 			);
 			path = "List Reviews";
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				26D698592956BBC90099B122 /* AppRouter.swift in Sources */,
 				26D698792956DBD30099B122 /* ListMovieViewModel.swift in Sources */,
 				26D698602956BC4A0099B122 /* ListMovieObject.swift in Sources */,
+				26D6988C2956ED9B0099B122 /* ListReviewsModel.swift in Sources */,
 				26D6987B2956DC220099B122 /* ListMovieModel.swift in Sources */,
 				26D698212956AEAE0099B122 /* AppDelegate.swift in Sources */,
 				26D698502956BB240099B122 /* HandleError.swift in Sources */,
