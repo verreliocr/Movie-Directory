@@ -46,6 +46,7 @@
 		26D698812956E5440099B122 /* DetailMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698802956E5440099B122 /* DetailMovieModel.swift */; };
 		26D698842956E59E0099B122 /* DetailMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698822956E59E0099B122 /* DetailMovieView.swift */; };
 		26D698852956E59E0099B122 /* DetailMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698832956E59E0099B122 /* DetailMovieView.xib */; };
+		26D698872956E7D50099B122 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698862956E7D50099B122 /* DetailMovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		26D698802956E5440099B122 /* DetailMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieModel.swift; sourceTree = "<group>"; };
 		26D698822956E59E0099B122 /* DetailMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieView.swift; sourceTree = "<group>"; };
 		26D698832956E59E0099B122 /* DetailMovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieView.xib; sourceTree = "<group>"; };
+		26D698862956E7D50099B122 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				26D698802956E5440099B122 /* DetailMovieModel.swift */,
 				26D698822956E59E0099B122 /* DetailMovieView.swift */,
 				26D698832956E59E0099B122 /* DetailMovieView.xib */,
+				26D698862956E7D50099B122 /* DetailMovieViewModel.swift */,
 			);
 			path = "Detail Movie";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				26D698762956DA210099B122 /* ListMovieView.swift in Sources */,
 				26D698642956BE570099B122 /* Extension+Codable.swift in Sources */,
 				26D698452956B7BC0099B122 /* Extension+UIViewController.swift in Sources */,
+				26D698872956E7D50099B122 /* DetailMovieViewModel.swift in Sources */,
 				26D698392956B7430099B122 /* Extension+UICollectionViewCell.swift in Sources */,
 				26D6986E2956D7450099B122 /* ListMovieContract.swift in Sources */,
 				26D698592956BBC90099B122 /* AppRouter.swift in Sources */,

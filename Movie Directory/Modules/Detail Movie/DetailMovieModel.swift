@@ -8,11 +8,7 @@
 import Foundation
 
 class DetailMovieModel {
-    var movieId: Int
+    var movieId: Int = 0
     var detailMovie: DetailMovieResponse = DetailMovieResponse()
     var youtubeKey: String = ""
-    
-    init(movieId: Int) {
-        self.movieId = movieId
-    }
 }

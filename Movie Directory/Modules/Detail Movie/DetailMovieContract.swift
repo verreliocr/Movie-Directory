@@ -17,7 +17,6 @@ protocol IDetailMovieView: AnyObject {
 protocol IDetailMovieViewModel {
     func setView(_ view: IDetailMovieView)
     func viewWillAppear()
-    func getTitlePage() -> String
     func getImageURL() -> URL?
     func getTitleMovie() -> String
     func getRate() -> String
