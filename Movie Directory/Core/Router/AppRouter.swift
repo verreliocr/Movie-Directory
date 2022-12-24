@@ -23,4 +23,10 @@ class AppRouter: IRouter {
         module.router.setNavigationController(navigationController)
         window?.rootViewController = navigationController
     }
+    
+    func push(module: FeatureModule, using params: [String : Any] = [:]) {
+        let module = module.create(using: self)
+        let viewController: UIViewController = module.resolve(using: params)
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }

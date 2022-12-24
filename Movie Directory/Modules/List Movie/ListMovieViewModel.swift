@@ -91,7 +91,8 @@ extension ListMovieViewModel: IListMoviesViewModel {
     }
     
     func didSelectMovie(at item: Int) {
-        
+        let id = model.movies[item].id ?? 0
+        router.push(module: .detailMovie, using: ["id" : id])
     }
     
     

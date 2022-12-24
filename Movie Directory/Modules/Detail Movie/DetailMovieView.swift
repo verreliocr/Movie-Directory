@@ -31,15 +31,60 @@ class DetailMovieView: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var webViewLoading: UIView!
     @IBOutlet weak var reviewsButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 88, right: 0)
+        self.title = "Detail Movie"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigation()
+        viewModel.viewWillAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        webView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
+    }
+    
+    private func setupNavigation() {
+        self.navigationController?.showBarIfNecessary()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            let value = webView.estimatedProgress
+            let progress = Float(value)
+            if progress == 1 {
+                self.webViewLoading.isHidden = true
+            } else {
+                self.webViewLoading.isHidden = false
+            }
+        }
     }
 
 }
 
 extension DetailMovieView: IDetailMovieView {
     func reloadView() {
+        if let url = viewModel.getImageURL() {
+            posterImageView.setImage(url: url, placeholder: nil)
+        }
         
+        titleLabel.text = viewModel.getTitleMovie()
+        ratingLabel.setTitle(viewModel.getRate(), for: .normal)
+        genreLabel.text = viewModel.getGenre()
+        releaseDateLabel.text = viewModel.getReleaseDate()
+        overviewLabel.text = viewModel.getOverview()
+        
+        if let url = URL(string: "https://www.youtube.com/embed/\(viewModel.getYoutubeKey())") {
+            webView.load(URLRequest(url: url))
+            webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+            webView.isHidden = false
+        }else{
+            webView.isHidden = true
+        }
     }
 }
