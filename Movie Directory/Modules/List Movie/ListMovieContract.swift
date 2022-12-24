@@ -18,5 +18,8 @@ protocol IListMoviesViewModel {
     func setView(_ view: IListMovieView)
     func viewWillAppear()
     func getNumberOfMovie() -> Int
-    func getImageURL(at index: Int) -> URL?
+    func getImageURL(at row: Int) -> URL
+    func getTitleMovie(at row: Int) -> String
+    func willDisplayCell(at row: Int)
+    func didSelectMovie(at row: Int)
 }

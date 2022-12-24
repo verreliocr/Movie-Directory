@@ -65,13 +65,13 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func showMaintenanceAlert(retryAction: @escaping (() -> Void), cancelAction: @escaping (() -> Void) = { }) {
+    func showMaintenanceAlert(retryAction: @escaping (() -> Void), cancelAction: (() -> Void)?) {
         let alert = UIAlertController(title: "We will be back soon", message: "We are under maintenance. Please try again later", preferredStyle: .alert)
         let retryButton = UIAlertAction(title: "Try Again", style: .default) { (_) in
             retryAction()
         }
         let thanksButton = UIAlertAction(title: "No Thanks", style: .default) { _ in
-            cancelAction()
+            cancelAction?()
         }
         alert.addAction(thanksButton)
         alert.addAction(retryButton)
