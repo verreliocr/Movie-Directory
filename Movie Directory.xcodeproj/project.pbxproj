@@ -47,6 +47,7 @@
 		26D698842956E59E0099B122 /* DetailMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698822956E59E0099B122 /* DetailMovieView.swift */; };
 		26D698852956E59E0099B122 /* DetailMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D698832956E59E0099B122 /* DetailMovieView.xib */; };
 		26D698872956E7D50099B122 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698862956E7D50099B122 /* DetailMovieViewModel.swift */; };
+		26D6988A2956ED220099B122 /* ListReviewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698892956ED220099B122 /* ListReviewsContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		26D698822956E59E0099B122 /* DetailMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieView.swift; sourceTree = "<group>"; };
 		26D698832956E59E0099B122 /* DetailMovieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailMovieView.xib; sourceTree = "<group>"; };
 		26D698862956E7D50099B122 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
+		26D698892956ED220099B122 /* ListReviewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReviewsContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				26D6986C2956C07A0099B122 /* List Movie */,
 				26D6987C2956E44B0099B122 /* Detail Movie */,
+				26D698882956ECFE0099B122 /* List Reviews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,6 +242,14 @@
 				26D698862956E7D50099B122 /* DetailMovieViewModel.swift */,
 			);
 			path = "Detail Movie";
+			sourceTree = "<group>";
+		};
+		26D698882956ECFE0099B122 /* List Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				26D698892956ED220099B122 /* ListReviewsContract.swift */,
+			);
+			path = "List Reviews";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				26D698662956BE800099B122 /* VideoObject.swift in Sources */,
 				26D6987E2956E4630099B122 /* DetailMovieContract.swift in Sources */,
 				26D6985B2956BBD90099B122 /* IModule.swift in Sources */,
+				26D6988A2956ED220099B122 /* ListReviewsContract.swift in Sources */,
 				26D698682956BF190099B122 /* ReviewObject.swift in Sources */,
 				26D6984C2956BAD50099B122 /* Reachability.swift in Sources */,
 				26D698622956BDA60099B122 /* DetailMovieResponse.swift in Sources */,
