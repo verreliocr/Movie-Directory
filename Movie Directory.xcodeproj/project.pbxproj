@@ -43,6 +43,7 @@
 		26D698792956DBD30099B122 /* ListMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698782956DBD30099B122 /* ListMovieViewModel.swift */; };
 		26D6987B2956DC220099B122 /* ListMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6987A2956DC220099B122 /* ListMovieModel.swift */; };
 		26D6987E2956E4630099B122 /* DetailMovieContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6987D2956E4630099B122 /* DetailMovieContract.swift */; };
+		26D698812956E5440099B122 /* DetailMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698802956E5440099B122 /* DetailMovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		26D698782956DBD30099B122 /* ListMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieViewModel.swift; sourceTree = "<group>"; };
 		26D6987A2956DC220099B122 /* ListMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieModel.swift; sourceTree = "<group>"; };
 		26D6987D2956E4630099B122 /* DetailMovieContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieContract.swift; sourceTree = "<group>"; };
+		26D698802956E5440099B122 /* DetailMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				26D6987D2956E4630099B122 /* DetailMovieContract.swift */,
+				26D698802956E5440099B122 /* DetailMovieModel.swift */,
 			);
 			path = "Detail Movie";
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				26D698212956AEAE0099B122 /* AppDelegate.swift in Sources */,
 				26D698502956BB240099B122 /* HandleError.swift in Sources */,
 				26D6983F2956B7860099B122 /* Extension+UITableViewCell.swift in Sources */,
+				26D698812956E5440099B122 /* DetailMovieModel.swift in Sources */,
 				26D6986A2956BF3D0099B122 /* BaseResponse.swift in Sources */,
 				26D698722956D94C0099B122 /* MovieItemCollectionCell.swift in Sources */,
 			);

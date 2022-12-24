@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class DetailMovieModel {
+    var movieId: Int
+    var detailMovie: DetailMovieResponse = DetailMovieResponse()
+    var youtubeKey: String = ""
+    
+    init(movieId: Int) {
+        self.movieId = movieId
+    }
+}
