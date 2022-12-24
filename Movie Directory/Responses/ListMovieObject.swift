@@ -9,7 +9,7 @@ import Foundation
 
 struct ListMovieObject: Codable {
     var id: Int?
-    var backdropPath: String?
+    var posterPath: String?
     var title: String?
     var voteAverage: Double?
     var overview: String?
@@ -17,7 +17,7 @@ struct ListMovieObject: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, title, overview
-        case backdropPath = "backdrop_path"
+        case posterPath = "poster_path"
         case voteAverage = "vote_average"
         case releaseDate = "release_date"
     }

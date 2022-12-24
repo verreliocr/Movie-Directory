@@ -18,29 +18,24 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fr-iQ-r9b">
                         <rect key="frame" x="0.0" y="0.0" width="263" height="368"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TS-RS-xIy">
-                        <rect key="frame" x="8" y="340.66666666666669" width="247" height="19.333333333333314"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="5TS-RS-xIy" secondAttribute="bottom" constant="8" id="0tZ-JT-1Pf"/>
-                <constraint firstItem="5TS-RS-xIy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="1NK-m5-1I7"/>
                 <constraint firstAttribute="trailing" secondItem="6Fr-iQ-r9b" secondAttribute="trailing" id="4Hq-PF-sFD"/>
                 <constraint firstItem="6Fr-iQ-r9b" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="J3y-Yj-X4K"/>
-                <constraint firstAttribute="trailing" secondItem="5TS-RS-xIy" secondAttribute="trailing" constant="8" id="ORk-1z-qo0"/>
                 <constraint firstItem="6Fr-iQ-r9b" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iF8-iX-zje"/>
                 <constraint firstAttribute="bottom" secondItem="6Fr-iQ-r9b" secondAttribute="bottom" id="mdO-lm-A8l"/>
             </constraints>
             <size key="customSize" width="263" height="368"/>
             <connections>
                 <outlet property="posterImageView" destination="6Fr-iQ-r9b" id="RpL-Vo-LiB"/>
-                <outlet property="titleLabel" destination="5TS-RS-xIy" id="i1c-Dt-jRK"/>
             </connections>
             <point key="canvasLocation" x="-114.61538461538461" y="165.63981042654027"/>
         </collectionViewCell>

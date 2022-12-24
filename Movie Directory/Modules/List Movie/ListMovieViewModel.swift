@@ -26,13 +26,15 @@ class ListMovieViewModel: IModule {
         return view
     }
     
-    private func getListMovie(appendResult: Bool = false) {
+    private func getListMovie(appendResult: Bool = false, completion: ((ErrorType?) -> Void)? = nil) {
         request.call(.getDiscoverMovie(page: model.page), bodyParams: [:]) { [weak self] data, type in
             if let response = BaseResponse<[ListMovieObject]>.decode(from: data) {
                 self?.model.totalPages = response.totalPages ?? 0
                 self?.model.totalElements = response.totalResults ?? 0
                 if appendResult {
                     self?.model.movies.append(contentsOf: response.results ?? [])
+                } else {
+                    self?.model.movies = response.results ?? []
                 }
                 self?.view?.reloadView()
             }else if let type = type {
@@ -71,17 +73,20 @@ extension ListMovieViewModel: IListMoviesViewModel {
     }
     
     func getImageURL(at item: Int) -> URL {
-        return URL(string: "https://image.tmdb.org/t/p/w500\(model.movies[item].backdropPath ?? "")")!
-    }
-    
-    func getTitleMovie(at item: Int) -> String {
-        return model.movies[item].title ?? ""
+        return URL(string: "https://image.tmdb.org/t/p/w500\(model.movies[item].posterPath ?? "")")!
     }
     
     func willDisplayCell(at item: Int) {
-        if self.model.page < model.totalPages {
-            self.model.page += 1
-            self.getListMovie(appendResult: true)
+        if model.allowRequestNextPage, item == getNumberOfMovie() - 1, model.movies.count < model.totalElements {
+            model.allowRequestNextPage = false
+            let prevPage = model.page
+            model.page += 1
+            getListMovie(appendResult: true) { [weak self] error in
+                self?.model.allowRequestNextPage = true
+                if error != nil {
+                    self?.model.page = prevPage
+                }
+            }
         }
     }
     

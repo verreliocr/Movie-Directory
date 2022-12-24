@@ -19,7 +19,6 @@ protocol IListMoviesViewModel {
     func viewWillAppear()
     func getNumberOfMovie() -> Int
     func getImageURL(at item: Int) -> URL
-    func getTitleMovie(at item: Int) -> String
     func willDisplayCell(at item: Int)
     func didSelectMovie(at item: Int)
 }

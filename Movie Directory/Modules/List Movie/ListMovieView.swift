@@ -60,14 +60,35 @@ extension ListMovieView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModel.getNumberOfMovie()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell: MovieItemCollectionCell = collectionView.dequeueReusableCell(indexPath) {
+            
+            cell.bind(imageUrl: viewModel.getImageURL(at: indexPath.item))
+            
+            return cell
+        }
         return UICollectionViewCell()
     }
 }
 
 extension ListMovieView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        viewModel.willDisplayCell(at: indexPath.item)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.didSelectMovie(at: indexPath.item)
+    }
+}
+
+extension ListMovieView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width - 40) / 2
+        let height = width * 3 / 2
+        
+        return CGSize(width: width, height: height)
+    }
 }

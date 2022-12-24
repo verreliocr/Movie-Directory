@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 enum FeatureModule {
+    case listMovie
 
     func create(using router: IRouter) -> IModule {
         switch self {
+        case .listMovie:
+            return ListMovieViewModel(router: router)
         }
     }
 }
