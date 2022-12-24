@@ -25,6 +25,10 @@
 		26D698502956BB240099B122 /* HandleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6984F2956BB240099B122 /* HandleError.swift */; };
 		26D698522956BB360099B122 /* IRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698512956BB360099B122 /* IRequest.swift */; };
 		26D698542956BB400099B122 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698532956BB400099B122 /* HTTPRequest.swift */; };
+		26D698572956BBB80099B122 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698562956BBB80099B122 /* IRouter.swift */; };
+		26D698592956BBC90099B122 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D698582956BBC90099B122 /* AppRouter.swift */; };
+		26D6985B2956BBD90099B122 /* IModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6985A2956BBD90099B122 /* IModule.swift */; };
+		26D6985D2956BBEF0099B122 /* FeatureModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6985C2956BBEF0099B122 /* FeatureModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		26D6984F2956BB240099B122 /* HandleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleError.swift; sourceTree = "<group>"; };
 		26D698512956BB360099B122 /* IRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRequest.swift; sourceTree = "<group>"; };
 		26D698532956BB400099B122 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		26D698562956BBB80099B122 /* IRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
+		26D698582956BBC90099B122 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		26D6985A2956BBD90099B122 /* IModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IModule.swift; sourceTree = "<group>"; };
+		26D6985C2956BBEF0099B122 /* FeatureModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +100,14 @@
 		26D698342956B6F40099B122 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				26D698352956B7010099B122 /* Extension */,
+				26D698352956B7010099B122 /* Extensions */,
 				26D698482956BA8B0099B122 /* Network */,
+				26D698552956BB830099B122 /* Router */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		26D698352956B7010099B122 /* Extension */ = {
+		26D698352956B7010099B122 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				26D698362956B71E0099B122 /* Extension+UIApplication.swift */,
@@ -111,7 +120,7 @@
 				26D698422956B7A70099B122 /* Extension+UIView.swift */,
 				26D698442956B7BC0099B122 /* Extension+UIViewController.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		26D698482956BA8B0099B122 /* Network */ = {
@@ -125,6 +134,17 @@
 				26D698532956BB400099B122 /* HTTPRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		26D698552956BB830099B122 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				26D698562956BBB80099B122 /* IRouter.swift */,
+				26D698582956BBC90099B122 /* AppRouter.swift */,
+				26D6985A2956BBD90099B122 /* IModule.swift */,
+				26D6985C2956BBEF0099B122 /* FeatureModule.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,15 +221,19 @@
 				26D6983B2956B7530099B122 /* Extension+UICollectionView.swift in Sources */,
 				26D698372956B71E0099B122 /* Extension+UIApplication.swift in Sources */,
 				26D698522956BB360099B122 /* IRequest.swift in Sources */,
+				26D6985B2956BBD90099B122 /* IModule.swift in Sources */,
 				26D6984C2956BAD50099B122 /* Reachability.swift in Sources */,
 				26D698542956BB400099B122 /* HTTPRequest.swift in Sources */,
 				26D698432956B7A70099B122 /* Extension+UIView.swift in Sources */,
 				26D6984A2956BAC10099B122 /* HTTPMethod.swift in Sources */,
 				26D698412956B7940099B122 /* Extension+UITableView.swift in Sources */,
 				26D6983D2956B7660099B122 /* Extension+UIImageView.swift in Sources */,
+				26D698572956BBB80099B122 /* IRouter.swift in Sources */,
+				26D6985D2956BBEF0099B122 /* FeatureModule.swift in Sources */,
 				26D698472956BA7A0099B122 /* Extension+UINavigationController.swift in Sources */,
 				26D698452956B7BC0099B122 /* Extension+UIViewController.swift in Sources */,
 				26D698392956B7430099B122 /* Extension+UICollectionViewCell.swift in Sources */,
+				26D698592956BBC90099B122 /* AppRouter.swift in Sources */,
 				26D698212956AEAE0099B122 /* AppDelegate.swift in Sources */,
 				26D698502956BB240099B122 /* HandleError.swift in Sources */,
 				26D6983F2956B7860099B122 /* Extension+UITableViewCell.swift in Sources */,
